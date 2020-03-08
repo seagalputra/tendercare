@@ -7,11 +7,11 @@ const app: express.Application = express()
 
 app.use(cors())
 app.use(helmet())
-app.use(express.json())
+app.use(bodyParser.json())
 
 app.get('/', (request: express.Request, respone: express.Response) => {
   respone.json({
-    foo: 'bar'
+    foo: 'bar',
   })
 })
 
