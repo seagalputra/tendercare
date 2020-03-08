@@ -8,7 +8,14 @@
     "build:dev": "tsc --watch --preserveWatchOutput",
     "dev": "concurrently \"npm:build:dev\" \"npm:start:dev\"",
     "lint": "npx eslint --fix --ext ts src test",
-    "test": "jest"
+    "test": "jest",
+    "precommit": "lint-staged && yarn test"
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "yarn lint",
+      "git add"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -36,6 +43,7 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.2",
     "jest": "^25.1.0",
+    "lint-staged": "^10.0.8",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
     "supertest": "^4.0.2",
