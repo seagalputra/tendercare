@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from 'antd'
 import withStyles from 'react-jss'
 
 const styles = {
@@ -11,12 +10,12 @@ const styles = {
   }
 }
 
-const DashboardView = ({ classes }) => {
+const LoginView = ({ classes }) => {
   return (
     <div className={classes.content}>
-      <Button type="primary">Click Me!</Button>
+      <h1>Login View!</h1>
     </div>
   )
 }
 
-export default withStyles(styles)(DashboardView)
+export default withStyles(styles)(LoginView)
