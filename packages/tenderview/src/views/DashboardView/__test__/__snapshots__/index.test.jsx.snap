@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DashboardView renders without crashing 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<WithStyles(ForwardRef(Container))>
+  <h1
+    className="makeStyles-title-1"
+  >
+    This is DashboardView
+  </h1>
+</WithStyles(ForwardRef(Container))>
 `;

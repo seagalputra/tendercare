@@ -1,21 +1,21 @@
 import React from 'react'
-import { Container } from '@material-ui/core'
+import { CircularProgress, Container } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
-  title: {
+  progress: {
     textAlign: 'center'
   }
 }))
 
-const DashboardView = () => {
+const FallbackProgress = () => {
   const classes = useStyles()
 
   return (
-    <Container>
-      <h1 className={classes.title}>This is DashboardView</h1>
+    <Container className={classes.progress}>
+      <CircularProgress />
     </Container>
   )
 }
 
-export default DashboardView
+export default FallbackProgress

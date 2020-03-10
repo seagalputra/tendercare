@@ -1,50 +1,64 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-import { Menu, Layout } from 'antd'
-import withStyles from 'react-jss'
+import { useHistory } from 'react-router-dom'
+import { makeStyles } from '@material-ui/core/styles'
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  IconButton
+} from '@material-ui/core'
+import MenuIcon from '@material-ui/icons/Menu'
 
-const styles = {
-  header: {
-    position: 'fixed',
-    zIndex: 1,
-    width: '100%',
-    backgroundColor: '#fff'
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1
   },
-  menu: {
-    lineHeight: '64px'
+  navigation: {
+    boxShadow: 'none'
   },
-  logo: {
-    width: '120px',
-    height: '31px',
-    background: '#f0f2f5',
-    margin: '16px 24px 16px 0',
-    float: 'left'
+  menuButton: {
+    marginRight: theme.spacing(2)
+  },
+  title: {
+    flexGrow: 1
   }
-}
+}))
 
-const NavigationBar = ({ classes }) => {
-  const { Header } = Layout
+const NavigationBar = () => {
+  const classes = useStyles()
+  const history = useHistory()
+
+  const handleLoginButton = () => {
+    history.push('/')
+  }
 
   return (
-    <Header className={classes.header}>
-      <div className={classes.logo} />
-      <Menu
-        className={classes.menu}
-        mode="horizontal"
-        defaultSelectedKeys={['1']}
+    <header className={classes.root}>
+      <AppBar
+        className={classes.navigation}
+        position="static"
+        color="transparent"
       >
-        <Menu.Item key="1">
-          <NavLink to="/">Beranda</NavLink>
-        </Menu.Item>
-        <Menu.Item key="2">
-          <NavLink to="/login">Ambil Barang</NavLink>
-        </Menu.Item>
-        <Menu.Item key="3">
-          <NavLink to="/">Lihat Barang</NavLink>
-        </Menu.Item>
-      </Menu>
-    </Header>
+        <Toolbar>
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="menu"
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" className={classes.title} color="inherit">
+            Tendercare
+          </Typography>
+          <Button color="inherit" onClick={handleLoginButton}>
+            Login
+          </Button>
+        </Toolbar>
+      </AppBar>
+    </header>
   )
 }
 
-export default withStyles(styles)(NavigationBar)
+export default NavigationBar
