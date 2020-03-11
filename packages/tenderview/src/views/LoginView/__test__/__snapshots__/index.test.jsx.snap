@@ -97,17 +97,5 @@ exports[`LoginView renders without crashing 1`] = `
       </WithStyles(ForwardRef(Grid))>
     </form>
   </Styled(MuiBox)>
-  <WithStyles(ForwardRef(Snackbar))
-    anchorOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "bottom",
-      }
-    }
-    autoHideDuration={6000}
-    message="Login Successfully"
-    onClose={[Function]}
-    open={false}
-  />
 </WithStyles(ForwardRef(Container))>
 `;

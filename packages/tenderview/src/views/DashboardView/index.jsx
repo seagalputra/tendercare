@@ -1,12 +1,7 @@
 import React from 'react'
 import { Container } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles'
 
-const useStyles = makeStyles(() => ({
-  title: {
-    textAlign: 'center'
-  }
-}))
+import useStyles from 'assets/styles/DashboardView'
 
 const DashboardView = () => {
   const classes = useStyles()

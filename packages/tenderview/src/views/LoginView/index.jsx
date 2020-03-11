@@ -9,45 +9,24 @@ import {
   Typography,
   Container,
   Box,
-  Snackbar
+  CircularProgress
 } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles'
 import { useFormik } from 'formik'
+import { useHistory } from 'react-router-dom'
 import * as Yup from 'yup'
 
-const useStyles = makeStyles(theme => ({
-  paper: {
-    marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: theme.spacing(6)
-  },
-  title: {
-    textAlign: 'center',
-    fontWeight: 'bold'
-  },
-  form: {
-    width: '100%',
-    marginTop: theme.spacing(1)
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2)
-  }
-}))
+import userLogin from 'services/apis/user'
+import { storeToken } from 'utils/sessions'
+
+import useStyles from 'assets/styles/LoginView'
 
 const LoginView = () => {
-  const [isAlertOpen, setIsAlertOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const classes = useStyles()
+  const history = useHistory()
 
-  const handleAlertOpen = () => {
-    setIsAlertOpen(true)
-  }
-
-  const handleAlertClose = (event, reason) => {
-    if (reason === 'clickaway') return
-
-    setIsAlertOpen(false)
+  const handleRedirect = path => {
+    history.push(path)
   }
 
   const validationForm = Yup.object({
@@ -57,13 +36,21 @@ const LoginView = () => {
     password: Yup.string().required()
   })
 
+  const handleLogin = async request => {
+    const { email, password } = request
+    setIsLoading(true)
+    const { token } = await userLogin(email, password)
+    storeToken(token)
+    handleRedirect('/dashboard')
+  }
+
   const formik = useFormik({
     initialValues: {
       email: '',
       password: ''
     },
     validationSchema: validationForm,
-    onSubmit: () => handleAlertOpen()
+    onSubmit: data => handleLogin(data)
   })
 
   return (
@@ -111,15 +98,26 @@ const LoginView = () => {
             control={<Checkbox value="remember" color="primary" />}
             label="Ingat Saya"
           />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-          >
-            Masuk
-          </Button>
+          {isLoading ? (
+            <Button
+              fullWidth
+              variant="contained"
+              disabled
+              className={classes.submit}
+            >
+              <CircularProgress size={24} color="primary" />
+            </Button>
+          ) : (
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+            >
+              Masuk
+            </Button>
+          )}
           <Grid container>
             <Grid item xs>
               <Link href="!#" variant="body2">
@@ -134,16 +132,6 @@ const LoginView = () => {
           </Grid>
         </form>
       </Box>
-      <Snackbar
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left'
-        }}
-        autoHideDuration={6000}
-        open={isAlertOpen}
-        message="Login Successfully"
-        onClose={handleAlertClose}
-      />
     </Container>
   )
 }
