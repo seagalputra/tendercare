@@ -8,7 +8,7 @@ import {
   Grid,
   Typography,
   Container,
-  Paper,
+  Box,
   Snackbar
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
@@ -68,7 +68,7 @@ const LoginView = () => {
 
   return (
     <Container component="main" maxWidth="sm">
-      <Paper className={classes.paper}>
+      <Box className={classes.paper}>
         <Typography className={classes.title} variant="h5" gutterBottom>
           Selamat Datang di SPO 1047
         </Typography>
@@ -122,18 +122,18 @@ const LoginView = () => {
           </Button>
           <Grid container>
             <Grid item xs>
-              <Link href="#" variant="body2">
+              <Link href="!#" variant="body2">
                 Lupa Password?
               </Link>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
-                {'Tidak punya akun? Daftar'}
+              <Link href="!#" variant="body2">
+                Tidak punya akun? Daftar
               </Link>
             </Grid>
           </Grid>
         </form>
-      </Paper>
+      </Box>
       <Snackbar
         anchorOrigin={{
           vertical: 'bottom',

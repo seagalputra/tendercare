@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationBar renders without crashing 1`] = `
+<header
+  className="makeStyles-root-1"
+>
+  <WithStyles(ForwardRef(AppBar))
+    className="makeStyles-navigation-2"
+    color="transparent"
+    position="static"
+  >
+    <WithStyles(ForwardRef(Toolbar))>
+      <WithStyles(ForwardRef(IconButton))
+        aria-label="menu"
+        className="makeStyles-menuButton-3"
+        color="inherit"
+        edge="start"
+      >
+        <MenuIcon />
+      </WithStyles(ForwardRef(IconButton))>
+      <WithStyles(ForwardRef(Typography))
+        className="makeStyles-title-4"
+        color="inherit"
+        variant="h6"
+      >
+        Tendercare
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Button))
+        color="inherit"
+        onClick={[Function]}
+      >
+        Login
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Toolbar))>
+  </WithStyles(ForwardRef(AppBar))>
+</header>
+`;

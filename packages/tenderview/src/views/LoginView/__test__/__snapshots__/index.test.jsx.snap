@@ -5,7 +5,7 @@ exports[`LoginView renders without crashing 1`] = `
   component="main"
   maxWidth="sm"
 >
-  <WithStyles(ForwardRef(Paper))
+  <Styled(MuiBox)
     className="makeStyles-paper-1"
   >
     <WithStyles(ForwardRef(Typography))
@@ -78,7 +78,7 @@ exports[`LoginView renders without crashing 1`] = `
           xs={true}
         >
           <WithStyles(ForwardRef(Link))
-            href="#"
+            href="!#"
             variant="body2"
           >
             Lupa Password?
@@ -88,7 +88,7 @@ exports[`LoginView renders without crashing 1`] = `
           item={true}
         >
           <WithStyles(ForwardRef(Link))
-            href="#"
+            href="!#"
             variant="body2"
           >
             Tidak punya akun? Daftar
@@ -96,7 +96,7 @@ exports[`LoginView renders without crashing 1`] = `
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </form>
-  </WithStyles(ForwardRef(Paper))>
+  </Styled(MuiBox)>
   <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
