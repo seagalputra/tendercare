@@ -5,11 +5,11 @@ import {
   Card,
   CardHeader,
   CardContent,
-  CardActions,
   Avatar,
-  Typography,
-  Button
+  Typography
 } from '@material-ui/core'
+
+import ProductCard from 'components/common/ProductCard'
 
 import useStyles from 'assets/styles/DashboardView'
 
@@ -34,13 +34,10 @@ const DashboardView = () => {
               This is DashboardView
             </Typography>
           </CardContent>
-          <CardActions className={classes.cardActions}>
-            <Button variant="contained" color="primary" disableElevation>
-              Ambil Barang
-            </Button>
-            <Button color="primary">Lihat Barang</Button>
-          </CardActions>
         </Card>
+      </Grid>
+      <Grid className={classes.productList}>
+        <ProductCard />
       </Grid>
     </Container>
   )

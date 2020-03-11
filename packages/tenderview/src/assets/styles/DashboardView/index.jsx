@@ -16,6 +16,9 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2)
+  },
+  productList: {
+    marginTop: theme.spacing(2)
   }
 }))
 

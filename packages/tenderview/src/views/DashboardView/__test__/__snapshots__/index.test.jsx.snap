@@ -28,23 +28,12 @@ exports[`DashboardView renders without crashing 1`] = `
           This is DashboardView
         </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(CardContent))>
-      <WithStyles(ForwardRef(CardActions))
-        className="makeStyles-cardActions-4"
-      >
-        <WithStyles(ForwardRef(Button))
-          color="primary"
-          disableElevation={true}
-          variant="contained"
-        >
-          Ambil Barang
-        </WithStyles(ForwardRef(Button))>
-        <WithStyles(ForwardRef(Button))
-          color="primary"
-        >
-          Lihat Barang
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(CardActions))>
     </WithStyles(ForwardRef(Card))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    className="makeStyles-productList-5"
+  >
+    <ProductCard />
   </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Container))>
 `;

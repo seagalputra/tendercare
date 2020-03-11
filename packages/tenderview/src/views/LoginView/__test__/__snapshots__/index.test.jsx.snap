@@ -1,12 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoginView renders without crashing 1`] = `
-<WithStyles(ForwardRef(Container))
+<WithStyles(ForwardRef(Grid))
   component="main"
-  maxWidth="sm"
+  container={true}
 >
-  <Styled(MuiBox)
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    item={true}
+    justify="center"
+    md={7}
+    sm={5}
+    xs={false}
+  >
+    <img
+      alt="Background"
+      className="makeStyles-image-5"
+      src="delivery.svg"
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     className="makeStyles-paper-1"
+    item={true}
+    md={5}
+    sm={7}
+    xs={12}
   >
     <WithStyles(ForwardRef(Typography))
       className="makeStyles-title-2"
@@ -96,6 +115,6 @@ exports[`LoginView renders without crashing 1`] = `
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </form>
-  </Styled(MuiBox)>
-</WithStyles(ForwardRef(Container))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;

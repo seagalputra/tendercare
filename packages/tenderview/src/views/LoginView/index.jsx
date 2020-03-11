@@ -7,8 +7,6 @@ import {
   Link,
   Grid,
   Typography,
-  Container,
-  Box,
   CircularProgress
 } from '@material-ui/core'
 import { useFormik } from 'formik'
@@ -19,6 +17,8 @@ import authenticateUser from 'api/user'
 import { storeToken } from 'utils/sessions'
 
 import useStyles from 'assets/styles/LoginView'
+
+import backgroundImage from 'assets/img/delivery.svg'
 
 const validationForm = Yup.object({
   email: Yup.string()
@@ -56,8 +56,19 @@ const LoginView = () => {
   })
 
   return (
-    <Container component="main" maxWidth="sm">
-      <Box className={classes.paper}>
+    <Grid container component="main">
+      <Grid
+        container
+        item
+        xs={false}
+        sm={5}
+        md={7}
+        justify="center"
+        alignItems="center"
+      >
+        <img src={backgroundImage} alt="Background" className={classes.image} />
+      </Grid>
+      <Grid item xs={12} sm={7} md={5} className={classes.paper}>
         <Typography className={classes.title} variant="h5" gutterBottom>
           Selamat Datang di SPO 1047
         </Typography>
@@ -133,8 +144,8 @@ const LoginView = () => {
             </Grid>
           </Grid>
         </form>
-      </Box>
-    </Container>
+      </Grid>
+    </Grid>
   )
 }
 
