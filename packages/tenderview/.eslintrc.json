@@ -1,0 +1,47 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "parser": "babel-eslint",
+  "rules": {
+    "strict": 0,
+    "arrow-parens": ["error", "as-needed"],
+    "quotes": ["error", "single"],
+    "jsx-a11y/label-has-for": 0,
+    "react/jsx-filename-extension": 0,
+    "import/extensions": 0,
+    "react/require-default-props": 0,
+    "react/prop-types": 0,
+    "camelcase": 0,
+    "no-restricted-syntax": 0,
+    "no-restricted-globals": 0,
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["to"]
+      }
+    ],
+    "no-param-reassign": 0,
+    "click-events-have-key-events": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "react/jsx-wrap-multilines": [
+      "error",
+      { "declaration": false, "assignment": false }
+    ],
+    "react/jsx-props-no-spreading": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      },
+      "alias": true
+    }
+  }
+}
