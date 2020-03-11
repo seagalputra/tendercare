@@ -15,10 +15,17 @@ import { useFormik } from 'formik'
 import { useHistory } from 'react-router-dom'
 import * as Yup from 'yup'
 
-import userLogin from 'services/apis/user'
+import authenticateUser from 'api/user'
 import { storeToken } from 'utils/sessions'
 
 import useStyles from 'assets/styles/LoginView'
+
+const validationForm = Yup.object({
+  email: Yup.string()
+    .email('Masukkan alamat email yang valid')
+    .required(),
+  password: Yup.string().required()
+})
 
 const LoginView = () => {
   const [isLoading, setIsLoading] = useState(false)
@@ -29,17 +36,12 @@ const LoginView = () => {
     history.push(path)
   }
 
-  const validationForm = Yup.object({
-    email: Yup.string()
-      .email('Masukkan alamat email yang valid')
-      .required(),
-    password: Yup.string().required()
-  })
-
   const handleLogin = async request => {
     const { email, password } = request
     setIsLoading(true)
-    const { token } = await userLogin(email, password)
+    const {
+      data: { token }
+    } = await authenticateUser(email, password)
     storeToken(token)
     handleRedirect('/dashboard')
   }

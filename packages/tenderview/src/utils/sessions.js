@@ -6,4 +6,8 @@ const storeToken = token => {
   localStorage.setItem(sessionStorageName, token)
 }
 
-export { isLoggedIn, storeToken }
+const clearToken = () => {
+  localStorage.removeItem(sessionStorageName)
+}
+
+export { isLoggedIn, storeToken, clearToken }

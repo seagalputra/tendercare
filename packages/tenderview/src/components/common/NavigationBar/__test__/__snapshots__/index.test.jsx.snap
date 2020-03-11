@@ -25,12 +25,6 @@ exports[`NavigationBar renders without crashing 1`] = `
       >
         Tendercare
       </WithStyles(ForwardRef(Typography))>
-      <WithStyles(ForwardRef(Button))
-        color="inherit"
-        onClick={[Function]}
-      >
-        Login
-      </WithStyles(ForwardRef(Button))>
     </WithStyles(ForwardRef(Toolbar))>
   </WithStyles(ForwardRef(AppBar))>
 </header>

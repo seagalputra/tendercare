@@ -1,11 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DashboardView renders without crashing 1`] = `
-<WithStyles(ForwardRef(Container))>
-  <h1
-    className="makeStyles-title-1"
-  >
-    This is DashboardView
-  </h1>
+<WithStyles(ForwardRef(Container))
+  className="makeStyles-root-1"
+  component="main"
+  maxWidth="sm"
+>
+  <WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Card))>
+      <WithStyles(ForwardRef(CardHeader))
+        avatar={
+          <ForwardRef(WithStyles)
+            aria-label="profile"
+            className="makeStyles-avatar-3"
+          >
+            DP
+          </ForwardRef(WithStyles)>
+        }
+        subheader="member@tendercare.com"
+        title="Dwiferdio Seagal Putra"
+      />
+      <WithStyles(ForwardRef(CardContent))>
+        <WithStyles(ForwardRef(Typography))
+          className="makeStyles-title-2"
+          variant="h5"
+        >
+          This is DashboardView
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(CardContent))>
+      <WithStyles(ForwardRef(CardActions))
+        className="makeStyles-cardActions-4"
+      >
+        <WithStyles(ForwardRef(Button))
+          color="primary"
+          disableElevation={true}
+          variant="contained"
+        >
+          Ambil Barang
+        </WithStyles(ForwardRef(Button))>
+        <WithStyles(ForwardRef(Button))
+          color="primary"
+        >
+          Lihat Barang
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(CardActions))>
+    </WithStyles(ForwardRef(Card))>
+  </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Container))>
 `;

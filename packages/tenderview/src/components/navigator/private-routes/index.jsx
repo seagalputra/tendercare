@@ -7,11 +7,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
     {...rest}
     render={props => {
       if (isLoggedIn()) {
-        return (
-          <div>
-            <Component {...props} />
-          </div>
-        )
+        return <Component {...props} />
       }
 
       return (
