@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import LoginView from '..'
+import NavigationBar from '..'
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -9,9 +9,9 @@ jest.mock('react-router-dom', () => ({
   })
 }))
 
-describe('LoginView', () => {
+describe('NavigationBar', () => {
   it('renders without crashing', () => {
-    const component = shallow(<LoginView />)
+    const component = shallow(<NavigationBar />)
     expect(component).toMatchSnapshot()
   })
 })

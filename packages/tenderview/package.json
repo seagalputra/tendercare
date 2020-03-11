@@ -29,93 +29,13 @@
   },
   "lint-staged": {
     "src/**/*.js": [
+      "prettier --single-quote --no-semi --write",
       "yarn lint",
       "git add"
     ]
   },
   "eslintConfig": {
-    "env": {
-      "browser": true,
-      "es6": true,
-      "jest": true
-    },
-    "extends": [
-      "plugin:react/recommended",
-      "airbnb"
-    ],
-    "globals": {
-      "Atomics": "readonly",
-      "SharedArrayBuffer": "readonly"
-    },
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "ecmaVersion": 2018,
-      "sourceType": "module"
-    },
-    "plugins": [
-      "react"
-    ],
-    "rules": {
-      "strict": 0,
-      "arrow-parens": [
-        "error",
-        "as-needed"
-      ],
-      "quotes": [
-        "error",
-        "single"
-      ],
-      "jsx-a11y/label-has-for": 0,
-      "react/jsx-filename-extension": 0,
-      "import/extensions": 0,
-      "react/require-default-props": 0,
-      "react/prop-types": 0,
-      "camelcase": 0,
-      "no-restricted-syntax": 0,
-      "no-restricted-globals": 0,
-      "jsx-a11y/anchor-is-valid": [
-        "error",
-        {
-          "components": [
-            "Link"
-          ],
-          "specialLink": [
-            "to"
-          ]
-        }
-      ],
-      "no-param-reassign": 0,
-      "click-events-have-key-events": 0,
-      "jsx-a11y/click-events-have-key-events": 0,
-      "jsx-a11y/no-noninteractive-element-interactions": 0,
-      "import/no-extraneous-dependencies": [
-        "error",
-        {
-          "devDependencies": true
-        }
-      ],
-      "react/jsx-wrap-multilines": [
-        "error",
-        {
-          "declaration": false,
-          "assignment": false
-        }
-      ],
-      "react/jsx-props-no-spreading": 0
-    },
-    "settings": {
-      "import/resolver": {
-        "node": {
-          "paths": [
-            "src"
-          ]
-        },
-        "alias": true
-      }
-    }
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -136,11 +56,14 @@
     "enzyme-to-json": "^3.4.4",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
     "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
     "react-test-renderer": "^16.13.0"
   }
 }

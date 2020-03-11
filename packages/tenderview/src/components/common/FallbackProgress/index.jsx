@@ -2,7 +2,7 @@ import React from 'react'
 import { CircularProgress, Container } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   progress: {
     textAlign: 'center'
   }

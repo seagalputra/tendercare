@@ -8,54 +8,43 @@ import {
   Grid,
   Typography,
   Container,
-  Paper,
-  Snackbar
+  Box,
+  CircularProgress
 } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles'
 import { useFormik } from 'formik'
+import { useHistory } from 'react-router-dom'
 import * as Yup from 'yup'
 
-const useStyles = makeStyles(theme => ({
-  paper: {
-    marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: theme.spacing(6)
-  },
-  title: {
-    textAlign: 'center',
-    fontWeight: 'bold'
-  },
-  form: {
-    width: '100%',
-    marginTop: theme.spacing(1)
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2)
-  }
-}))
+import authenticateUser from 'api/user'
+import { storeToken } from 'utils/sessions'
+
+import useStyles from 'assets/styles/LoginView'
+
+const validationForm = Yup.object({
+  email: Yup.string()
+    .email('Masukkan alamat email yang valid')
+    .required(),
+  password: Yup.string().required()
+})
 
 const LoginView = () => {
-  const [isAlertOpen, setIsAlertOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const classes = useStyles()
+  const history = useHistory()
 
-  const handleAlertOpen = () => {
-    setIsAlertOpen(true)
+  const handleRedirect = path => {
+    history.push(path)
   }
 
-  const handleAlertClose = (event, reason) => {
-    if (reason === 'clickaway') return
-
-    setIsAlertOpen(false)
+  const handleLogin = async request => {
+    const { email, password } = request
+    setIsLoading(true)
+    const {
+      data: { token }
+    } = await authenticateUser(email, password)
+    storeToken(token)
+    handleRedirect('/dashboard')
   }
-
-  const validationForm = Yup.object({
-    email: Yup.string()
-      .email('Masukkan alamat email yang valid')
-      .required(),
-    password: Yup.string().required()
-  })
 
   const formik = useFormik({
     initialValues: {
@@ -63,12 +52,12 @@ const LoginView = () => {
       password: ''
     },
     validationSchema: validationForm,
-    onSubmit: () => handleAlertOpen()
+    onSubmit: data => handleLogin(data)
   })
 
   return (
     <Container component="main" maxWidth="sm">
-      <Paper className={classes.paper}>
+      <Box className={classes.paper}>
         <Typography className={classes.title} variant="h5" gutterBottom>
           Selamat Datang di SPO 1047
         </Typography>
@@ -111,39 +100,40 @@ const LoginView = () => {
             control={<Checkbox value="remember" color="primary" />}
             label="Ingat Saya"
           />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-          >
-            Masuk
-          </Button>
+          {isLoading ? (
+            <Button
+              fullWidth
+              variant="contained"
+              disabled
+              className={classes.submit}
+            >
+              <CircularProgress size={24} color="primary" />
+            </Button>
+          ) : (
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+            >
+              Masuk
+            </Button>
+          )}
           <Grid container>
             <Grid item xs>
-              <Link href="#" variant="body2">
+              <Link href="!#" variant="body2">
                 Lupa Password?
               </Link>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
-                {'Tidak punya akun? Daftar'}
+              <Link href="!#" variant="body2">
+                Tidak punya akun? Daftar
               </Link>
             </Grid>
           </Grid>
         </form>
-      </Paper>
-      <Snackbar
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left'
-        }}
-        autoHideDuration={6000}
-        open={isAlertOpen}
-        message="Login Successfully"
-        onClose={handleAlertClose}
-      />
+      </Box>
     </Container>
   )
 }

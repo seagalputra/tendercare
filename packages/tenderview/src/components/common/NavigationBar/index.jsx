@@ -10,6 +10,8 @@ import {
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 
+import { isLoggedIn, clearToken } from 'utils/sessions'
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
@@ -29,7 +31,8 @@ const NavigationBar = () => {
   const classes = useStyles()
   const history = useHistory()
 
-  const handleLoginButton = () => {
+  const handleLogout = () => {
+    clearToken()
     history.push('/')
   }
 
@@ -52,9 +55,11 @@ const NavigationBar = () => {
           <Typography variant="h6" className={classes.title} color="inherit">
             Tendercare
           </Typography>
-          <Button color="inherit" onClick={handleLoginButton}>
-            Login
-          </Button>
+          {isLoggedIn() ? (
+            <Button color="inherit" onClick={handleLogout}>
+              Keluar
+            </Button>
+          ) : null}
         </Toolbar>
       </AppBar>
     </header>
