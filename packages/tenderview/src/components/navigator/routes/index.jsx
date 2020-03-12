@@ -6,7 +6,7 @@ import NavigationBar from 'components/common/NavigationBar'
 import FallbackProgress from 'components/common/FallbackProgress'
 
 const DashboardView = lazy(() => import('../../../views/DashboardView'))
-const LoginView = lazy(() => import('../../../views/LoginView'))
+const HomeView = lazy(() => import('../../../views/HomeView'))
 
 const Routes = () => {
   return (
@@ -14,7 +14,7 @@ const Routes = () => {
       <NavigationBar />
       <Suspense fallback={<FallbackProgress />}>
         <Switch>
-          <Route exact path="/" component={LoginView} />
+          <Route exact path="/" component={HomeView} />
           <PrivateRoute path="/dashboard" component={DashboardView} />
         </Switch>
       </Suspense>

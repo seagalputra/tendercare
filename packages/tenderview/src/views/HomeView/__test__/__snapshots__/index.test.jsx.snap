@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeView renders without crashing 1`] = `
+<WithStyles(ForwardRef(Grid))
+  component="main"
+  container={true}
+>
+  <Hidden
+    smDown={true}
+  >
+    <WithStyles(ForwardRef(Grid))
+      alignItems="center"
+      container={true}
+      item={true}
+      justify="center"
+      md={7}
+      sm={false}
+      xs={false}
+    >
+      <img
+        alt="Background"
+        className="makeStyles-image-2"
+        src="delivery.svg"
+      />
+    </WithStyles(ForwardRef(Grid))>
+  </Hidden>
+  <WithStyles(ForwardRef(Grid))
+    className="makeStyles-paper-1"
+    item={true}
+    md={5}
+    sm={12}
+    xs={12}
+  >
+    <Login
+      handleRedirect={[Function]}
+      toggleRegister={[Function]}
+    />
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;

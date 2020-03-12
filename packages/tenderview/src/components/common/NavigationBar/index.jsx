@@ -5,10 +5,13 @@ import {
   AppBar,
   Toolbar,
   Typography,
-  Button,
-  IconButton
+  IconButton,
+  Hidden,
+  Badge
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
+import NotificationsIcon from '@material-ui/icons/Notifications'
+import ExitToAppIcon from '@material-ui/icons/ExitToApp'
 
 import { isLoggedIn, clearToken } from 'utils/sessions'
 
@@ -44,21 +47,34 @@ const NavigationBar = () => {
         color="transparent"
       >
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
+          <Hidden smUp>
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="menu"
+            >
+              <MenuIcon />
+            </IconButton>
+          </Hidden>
           <Typography variant="h6" className={classes.title} color="inherit">
-            Tendercare
+            Service Point Oriflame 1047
           </Typography>
           {isLoggedIn() ? (
-            <Button color="inherit" onClick={handleLogout}>
-              Keluar
-            </Button>
+            <>
+              <IconButton color="inherit" aria-label="11 notifikasi baru">
+                <Badge badgeContent={11} color="secondary">
+                  <NotificationsIcon />
+                </Badge>
+              </IconButton>
+              <IconButton
+                color="inherit"
+                aria-label="Keluar"
+                onClick={handleLogout}
+              >
+                <ExitToAppIcon />
+              </IconButton>
+            </>
           ) : null}
         </Toolbar>
       </AppBar>
