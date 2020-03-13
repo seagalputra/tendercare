@@ -31,9 +31,8 @@ exports[`HomeView renders without crashing 1`] = `
     sm={12}
     xs={12}
   >
-    <Login
+    <LoginForm
       handleRedirect={[Function]}
-      toggleRegister={[Function]}
     />
   </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Grid))>

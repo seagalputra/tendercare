@@ -9,7 +9,7 @@ import {
   CircularProgress,
   Grid
 } from '@material-ui/core'
-import useStyles from 'assets/styles/Login'
+import useStyles from 'assets/styles/LoginForm'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 
@@ -23,7 +23,7 @@ const validationForm = Yup.object({
   password: Yup.string().required()
 })
 
-const Login = ({ handleRedirect, toggleRegister }) => {
+const LoginForm = ({ handleRedirect }) => {
   const [isLoading, setIsLoading] = useState(false)
   const classes = useStyles()
 
@@ -118,7 +118,7 @@ const Login = ({ handleRedirect, toggleRegister }) => {
             </Link>
           </Grid>
           <Grid item>
-            <Link href="!#" variant="body2" onClick={toggleRegister}>
+            <Link href="/register" variant="body2">
               Tidak punya akun? Daftar
             </Link>
           </Grid>
@@ -128,4 +128,4 @@ const Login = ({ handleRedirect, toggleRegister }) => {
   )
 }
 
-export default Login
+export default LoginForm

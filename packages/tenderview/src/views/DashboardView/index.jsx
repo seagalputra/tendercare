@@ -1,15 +1,9 @@
 import React from 'react'
-import {
-  Container,
-  Grid,
-  Card,
-  CardHeader,
-  CardContent,
-  Avatar,
-  Typography
-} from '@material-ui/core'
+import { Container, Grid, Card, CardHeader, Avatar } from '@material-ui/core'
 
 import ProductCard from 'components/common/ProductCard'
+
+import dashboardImage from 'assets/img/dashboard.svg'
 
 import useStyles from 'assets/styles/DashboardView'
 
@@ -18,7 +12,14 @@ const DashboardView = () => {
 
   return (
     <Container component="main" className={classes.root} maxWidth="sm">
-      <Grid>
+      <Grid container justify="flex-end">
+        <img
+          className={classes.dashboardImage}
+          src={dashboardImage}
+          alt="Dashboard"
+        />
+      </Grid>
+      <Grid item>
         <Card>
           <CardHeader
             avatar={
@@ -29,15 +30,15 @@ const DashboardView = () => {
             title="Dwiferdio Seagal Putra"
             subheader="member@tendercare.com"
           />
-          <CardContent>
-            <Typography variant="h5" className={classes.title}>
-              This is DashboardView
-            </Typography>
-          </CardContent>
         </Card>
       </Grid>
-      <Grid className={classes.productList}>
-        <ProductCard />
+      <Grid container className={classes.productList} spacing={2}>
+        <Grid item xs={6}>
+          <ProductCard />
+        </Grid>
+        <Grid item xs={6}>
+          <ProductCard />
+        </Grid>
       </Grid>
     </Container>
   )

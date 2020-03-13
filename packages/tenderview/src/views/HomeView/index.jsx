@@ -1,25 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Grid, Hidden } from '@material-ui/core'
 import { useHistory } from 'react-router-dom'
 
-import Login from 'components/resources/HomeView/Login'
-import Register from 'components/resources/HomeView/Register'
+import LoginForm from 'components/resources/HomeView/LoginForm'
 
 import useStyles from 'assets/styles/HomeView'
 
 import backgroundImage from 'assets/img/delivery.svg'
 
 const HomeView = () => {
-  const [isRegister, setIsRegister] = useState(false)
   const classes = useStyles()
   const history = useHistory()
 
   const handleRedirect = path => {
     history.push(path)
-  }
-
-  const toggleRegister = () => {
-    setIsRegister(!isRegister)
   }
 
   return (
@@ -42,14 +36,7 @@ const HomeView = () => {
         </Grid>
       </Hidden>
       <Grid item xs={12} sm={12} md={5} className={classes.paper}>
-        {isRegister ? (
-          <Register toggleRegister={toggleRegister} />
-        ) : (
-          <Login
-            handleRedirect={handleRedirect}
-            toggleRegister={toggleRegister}
-          />
-        )}
+        <LoginForm handleRedirect={handleRedirect} />
       </Grid>
     </Grid>
   )

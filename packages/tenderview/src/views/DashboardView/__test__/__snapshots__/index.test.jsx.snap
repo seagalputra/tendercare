@@ -6,13 +6,25 @@ exports[`DashboardView renders without crashing 1`] = `
   component="main"
   maxWidth="sm"
 >
-  <WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    justify="flex-end"
+  >
+    <img
+      alt="Dashboard"
+      className="makeStyles-dashboardImage-2"
+      src="dashboard.svg"
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+  >
     <WithStyles(ForwardRef(Card))>
       <WithStyles(ForwardRef(CardHeader))
         avatar={
           <ForwardRef(WithStyles)
             aria-label="profile"
-            className="makeStyles-avatar-3"
+            className="makeStyles-avatar-4"
           >
             DP
           </ForwardRef(WithStyles)>
@@ -20,20 +32,25 @@ exports[`DashboardView renders without crashing 1`] = `
         subheader="member@tendercare.com"
         title="Dwiferdio Seagal Putra"
       />
-      <WithStyles(ForwardRef(CardContent))>
-        <WithStyles(ForwardRef(Typography))
-          className="makeStyles-title-2"
-          variant="h5"
-        >
-          This is DashboardView
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(CardContent))>
     </WithStyles(ForwardRef(Card))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
-    className="makeStyles-productList-5"
+    className="makeStyles-productList-6"
+    container={true}
+    spacing={2}
   >
-    <ProductCard />
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={6}
+    >
+      <ProductCard />
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={6}
+    >
+      <ProductCard />
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Container))>
 `;

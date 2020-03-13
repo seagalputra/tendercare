@@ -5,6 +5,9 @@ const useStyles = makeStyles(theme => ({
   root: {
     marginTop: theme.spacing(3)
   },
+  dashboardImage: {
+    height: '160px'
+  },
   title: {
     textAlign: 'center'
   },
