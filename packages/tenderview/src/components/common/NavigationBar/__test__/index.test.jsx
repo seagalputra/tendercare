@@ -9,9 +9,11 @@ jest.mock('react-router-dom', () => ({
   })
 }))
 
+const isLoggedIn = jest.fn()
+
 describe('NavigationBar', () => {
   it('renders without crashing', () => {
-    const component = shallow(<NavigationBar />)
+    const component = shallow(<NavigationBar isLoggedIn={isLoggedIn} />)
     expect(component).toMatchSnapshot()
   })
 })

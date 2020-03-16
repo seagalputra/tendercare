@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import PrivateRoute from 'components/navigator/private-routes'
+import { isLoggedIn } from 'utils/sessions'
 
 import NavigationBar from 'components/common/NavigationBar'
 import FallbackProgress from 'components/common/FallbackProgress'
@@ -12,7 +13,7 @@ const RegisterView = lazy(() => import('../../../views/RegisterView'))
 const Routes = () => {
   return (
     <Router>
-      <NavigationBar />
+      <NavigationBar isLoggedIn={isLoggedIn} />
       <Suspense fallback={<FallbackProgress />}>
         <Switch>
           <Route exact path="/" component={HomeView} />

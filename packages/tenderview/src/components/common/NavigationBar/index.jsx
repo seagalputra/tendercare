@@ -13,7 +13,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 import NotificationsIcon from '@material-ui/icons/Notifications'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp'
 
-import { isLoggedIn, clearToken } from 'utils/sessions'
+import { clearToken } from 'utils/sessions'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const NavigationBar = () => {
+const NavigationBar = ({ isLoggedIn }) => {
   const classes = useStyles()
   const history = useHistory()
 
