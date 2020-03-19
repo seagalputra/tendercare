@@ -1,0 +1,448 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button Text 1`] = `
+<div
+  style={
+    Object {
+      "margin": 20,
+    }
+  }
+>
+  <button
+    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    type="button"
+  >
+    Hello Button
+  </button>
+</div>
+`;
+
+exports[`Storyshots Navigation Bar Default 1`] = `
+<nav
+  className="flex items-center justify-between flex-wrap bg-transparent p-6"
+>
+  <div
+    className="flex items-center flex-shrink-0 text-gray-800 mr-6"
+  >
+    <svg
+      className="fill-current h-8 w-8 mr-2"
+      height="54"
+      viewBox="0 0 54 54"
+      width="54"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
+      />
+    </svg>
+    <span
+      className="font-semibold text-xl tracking-tight"
+    >
+      SPO 1047
+    </span>
+  </div>
+  <div
+    className="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
+  >
+    <div
+      className="text-sm lg:flex-grow"
+    >
+      <a
+        className="block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-gray-400 mr-4"
+        href="#responsive-header"
+      >
+        Beranda
+      </a>
+      <a
+        className="block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-gray-400 mr-4"
+        href="#responsive-header"
+      >
+        Profil
+      </a>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`Storyshots Product Card Default 1`] = `
+<div
+  style={
+    Object {
+      "margin": 20,
+    }
+  }
+>
+  <div
+    className="max-w-sm rounded overflow-hidden shadow-lg"
+  >
+    <img
+      alt="Product"
+      className="w-full"
+      src="https://source.unsplash.com/random/400x300"
+    />
+    <div
+      className="px-6 py-4"
+    >
+      <div
+        className="font-bold text-xl mb-2"
+      >
+        Tendercare
+      </div>
+      <p
+        className="text-gray-700 text-base"
+      >
+        INV/2020/001
+      </p>
+      <p
+        className="text-gray-700 text-base"
+      >
+        This is description of the product
+      </p>
+      <p
+        className="text-gray-500 text-base pt-1"
+      >
+        Rp 20.000
+      </p>
+    </div>
+    <div
+      className="px-6 py-4 flex justify-around border-t border-gray-300"
+    >
+      <button
+        className="text-base text-gray-800 hover:text-gray-600 font-bold py-2 px-4"
+        onClick={[Function]}
+        type="button"
+      >
+        Ambil Barang
+      </button>
+      <button
+        className="text-base text-gray-800 hover:text-gray-600 font-bold py-2 px-4"
+        onClick={[Function]}
+        type="button"
+      >
+        Detail Product
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Product List Default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "2rem",
+    }
+  }
+>
+  <div
+    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 row-gap-8 col-gap-4"
+  >
+    <div
+      className="max-w-sm rounded overflow-hidden shadow-lg"
+    >
+      <img
+        alt="Product"
+        className="w-full"
+        src="https://source.unsplash.com/random/400x300"
+      />
+      <div
+        className="px-6 py-4"
+      >
+        <div
+          className="font-bold text-xl mb-2"
+        >
+          Cetaphil
+        </div>
+        <p
+          className="text-gray-700 text-base"
+        >
+          INV/2020/001
+        </p>
+        <p
+          className="text-gray-700 text-base"
+        >
+          This is description of the product
+        </p>
+        <p
+          className="text-gray-500 text-base pt-1"
+        >
+          Rp 120.000
+        </p>
+      </div>
+      <div
+        className="px-6 py-4 flex justify-around border-t border-gray-300"
+      >
+        <button
+          className="text-base text-gray-800 hover:text-gray-600 font-bold py-2 px-4"
+          onClick={[Function]}
+          type="button"
+        >
+          Ambil Barang
+        </button>
+        <button
+          className="text-base text-gray-800 hover:text-gray-600 font-bold py-2 px-4"
+          onClick={[Function]}
+          type="button"
+        >
+          Detail Product
+        </button>
+      </div>
+    </div>
+    <div
+      className="max-w-sm rounded overflow-hidden shadow-lg"
+    >
+      <img
+        alt="Product"
+        className="w-full"
+        src="https://source.unsplash.com/random/400x300"
+      />
+      <div
+        className="px-6 py-4"
+      >
+        <div
+          className="font-bold text-xl mb-2"
+        >
+          Pepsodent
+        </div>
+        <p
+          className="text-gray-700 text-base"
+        >
+          INV/2020/002
+        </p>
+        <p
+          className="text-gray-700 text-base"
+        >
+          This is description of the product
+        </p>
+        <p
+          className="text-gray-500 text-base pt-1"
+        >
+          Rp 15.000
+        </p>
+      </div>
+      <div
+        className="px-6 py-4 flex justify-around border-t border-gray-300"
+      >
+        <button
+          className="text-base text-gray-800 hover:text-gray-600 font-bold py-2 px-4"
+          onClick={[Function]}
+          type="button"
+        >
+          Ambil Barang
+        </button>
+        <button
+          className="text-base text-gray-800 hover:text-gray-600 font-bold py-2 px-4"
+          onClick={[Function]}
+          type="button"
+        >
+          Detail Product
+        </button>
+      </div>
+    </div>
+    <div
+      className="max-w-sm rounded overflow-hidden shadow-lg"
+    >
+      <img
+        alt="Product"
+        className="w-full"
+        src="https://source.unsplash.com/random/400x300"
+      />
+      <div
+        className="px-6 py-4"
+      >
+        <div
+          className="font-bold text-xl mb-2"
+        >
+          Lifebuoy
+        </div>
+        <p
+          className="text-gray-700 text-base"
+        >
+          INV/2020/003
+        </p>
+        <p
+          className="text-gray-700 text-base"
+        >
+          This is description of the product
+        </p>
+        <p
+          className="text-gray-500 text-base pt-1"
+        >
+          Rp 4.000
+        </p>
+      </div>
+      <div
+        className="px-6 py-4 flex justify-around border-t border-gray-300"
+      >
+        <button
+          className="text-base text-gray-800 hover:text-gray-600 font-bold py-2 px-4"
+          onClick={[Function]}
+          type="button"
+        >
+          Ambil Barang
+        </button>
+        <button
+          className="text-base text-gray-800 hover:text-gray-600 font-bold py-2 px-4"
+          onClick={[Function]}
+          type="button"
+        >
+          Detail Product
+        </button>
+      </div>
+    </div>
+    <div
+      className="max-w-sm rounded overflow-hidden shadow-lg"
+    >
+      <img
+        alt="Product"
+        className="w-full"
+        src="https://source.unsplash.com/random/400x300"
+      />
+      <div
+        className="px-6 py-4"
+      >
+        <div
+          className="font-bold text-xl mb-2"
+        >
+          Le Minerale
+        </div>
+        <p
+          className="text-gray-700 text-base"
+        >
+          INV/2020/004
+        </p>
+        <p
+          className="text-gray-700 text-base"
+        >
+          This is description of the product
+        </p>
+        <p
+          className="text-gray-500 text-base pt-1"
+        >
+          Rp 3.000
+        </p>
+      </div>
+      <div
+        className="px-6 py-4 flex justify-around border-t border-gray-300"
+      >
+        <button
+          className="text-base text-gray-800 hover:text-gray-600 font-bold py-2 px-4"
+          onClick={[Function]}
+          type="button"
+        >
+          Ambil Barang
+        </button>
+        <button
+          className="text-base text-gray-800 hover:text-gray-600 font-bold py-2 px-4"
+          onClick={[Function]}
+          type="button"
+        >
+          Detail Product
+        </button>
+      </div>
+    </div>
+    <div
+      className="max-w-sm rounded overflow-hidden shadow-lg"
+    >
+      <img
+        alt="Product"
+        className="w-full"
+        src="https://source.unsplash.com/random/400x300"
+      />
+      <div
+        className="px-6 py-4"
+      >
+        <div
+          className="font-bold text-xl mb-2"
+        >
+          Pantene
+        </div>
+        <p
+          className="text-gray-700 text-base"
+        >
+          INV/2020/005
+        </p>
+        <p
+          className="text-gray-700 text-base"
+        >
+          This is description of the product
+        </p>
+        <p
+          className="text-gray-500 text-base pt-1"
+        >
+          Rp 5.500
+        </p>
+      </div>
+      <div
+        className="px-6 py-4 flex justify-around border-t border-gray-300"
+      >
+        <button
+          className="text-base text-gray-800 hover:text-gray-600 font-bold py-2 px-4"
+          onClick={[Function]}
+          type="button"
+        >
+          Ambil Barang
+        </button>
+        <button
+          className="text-base text-gray-800 hover:text-gray-600 font-bold py-2 px-4"
+          onClick={[Function]}
+          type="button"
+        >
+          Detail Product
+        </button>
+      </div>
+    </div>
+    <div
+      className="max-w-sm rounded overflow-hidden shadow-lg"
+    >
+      <img
+        alt="Product"
+        className="w-full"
+        src="https://source.unsplash.com/random/400x300"
+      />
+      <div
+        className="px-6 py-4"
+      >
+        <div
+          className="font-bold text-xl mb-2"
+        >
+          Ciptadent
+        </div>
+        <p
+          className="text-gray-700 text-base"
+        >
+          INV/2020/006
+        </p>
+        <p
+          className="text-gray-700 text-base"
+        >
+          This is description of the product
+        </p>
+        <p
+          className="text-gray-500 text-base pt-1"
+        >
+          Rp 12.000
+        </p>
+      </div>
+      <div
+        className="px-6 py-4 flex justify-around border-t border-gray-300"
+      >
+        <button
+          className="text-base text-gray-800 hover:text-gray-600 font-bold py-2 px-4"
+          onClick={[Function]}
+          type="button"
+        >
+          Ambil Barang
+        </button>
+        <button
+          className="text-base text-gray-800 hover:text-gray-600 font-bold py-2 px-4"
+          onClick={[Function]}
+          type="button"
+        >
+          Detail Product
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

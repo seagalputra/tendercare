@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`FallbackProgress renders without crashing 1`] = `
-<WithStyles(ForwardRef(Container))
-  className="makeStyles-progress-1"
->
-  <WithStyles(ForwardRef(CircularProgress)) />
-</WithStyles(ForwardRef(Container))>
-`;
