@@ -2,7 +2,7 @@ import React from 'react'
 
 const NavigationBar = () => {
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-transparent p-6">
+    <nav className="flex items-center justify-between flex-wrap bg-transparent p-6 border-b">
       <div className="flex items-center flex-shrink-0 text-gray-800 mr-6">
         <svg
           className="fill-current h-8 w-8 mr-2"
@@ -31,6 +31,15 @@ const NavigationBar = () => {
             Profil
           </a>
         </div>
+      </div>
+
+      <div className="flex items-center flex-wrap">
+        <img
+          className="h-8 w-8 rounded-full border-2 border-gray-400"
+          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+          alt=""
+        />
+        <p className="ml-3 text-sm text-gray-600">User</p>
       </div>
     </nav>
   )

@@ -2,7 +2,7 @@
 
 exports[`NavigationBar renders without crashing 1`] = `
 <nav
-  className="flex items-center justify-between flex-wrap bg-transparent p-6"
+  className="flex items-center justify-between flex-wrap bg-transparent p-6 border-b"
 >
   <div
     className="flex items-center flex-shrink-0 text-gray-800 mr-6"
@@ -43,6 +43,20 @@ exports[`NavigationBar renders without crashing 1`] = `
         Profil
       </a>
     </div>
+  </div>
+  <div
+    className="flex items-center flex-wrap"
+  >
+    <img
+      alt=""
+      className="h-8 w-8 rounded-full border-2 border-gray-400"
+      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+    />
+    <p
+      className="ml-3 text-sm text-gray-600"
+    >
+      User
+    </p>
   </div>
 </nav>
 `;
